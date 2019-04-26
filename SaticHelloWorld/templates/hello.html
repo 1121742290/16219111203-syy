@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+
+<html>
+    <head>
+        <title>豆瓣网爬取</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+       <h1>豆瓣top250电影</h1>
+       <table>
+            <tr>
+                <td>电影名</td>
+                <td>电影评分</td>
+                <td>电影评价人数</td>
+                <td>电影短评</td>
+            </tr>
+            {% for line in movielist %}
+            <tr>
+                <td>{{line.moviename}}</td>
+                <td>{{line.moviegrades}}</td>
+                <td>{{line.movieassess}}</td>
+                <td>{{line.movieshortassess}}</td>
+            </tr>
+            {% endfor %}
+       </table>
+    </div>
+    </body>
+
+</html>

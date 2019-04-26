@@ -1,0 +1,29 @@
+
+<html>
+    <head>
+        <title>京东网爬取</title>
+    </head>
+    <body>
+       <h1 style="text-align: center">京东手机</h1>
+       <table style="font-size: 5">
+            <tr>
+            {% for line in phonelist %}
+            {% ifequal line.id 5 %}
+            <td><img src="{{line.img}}"><br>
+                <span>{{line.name}}</span></br>
+                <span>${{line.price}}</span></td>
+                </tr>
+                <tr>
+                
+            
+            {% else %}
+            <td><img src="{{line.img}}"><br>
+                <span>{{line.name}}</span></br>
+                <span>${{line.price}}</span></td>
+                {% endifequal %}
+            {% endfor %}
+            </tr>
+       </table>
+    </body>
+
+</html>
